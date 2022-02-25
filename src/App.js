@@ -2,24 +2,21 @@ import styled from "styled-components";
 
 const Wrapped = styled.div`
 display: flex;
-
 `
 
-const Box = styled.div`
-background-color: ${(props) => props.bgColor};
-height:100px;
-width: 100px;
-`
-
-const Circle = styled(Box)`
+const Input = styled.input.attrs({required:true})`
+background-color: tomato;
+color:white;
 border-radius: 50px;
+border: 0;
 `
 
 function App() {
   return (
     <Wrapped>
-      <Box bgColor="red"></Box>
-      <Circle bgColor="blue"></Circle>
+     <Input />
+     <Input />
+     <Input />
     </Wrapped>
   );
 }
