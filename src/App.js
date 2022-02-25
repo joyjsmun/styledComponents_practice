@@ -1,7 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
-const Wrapped = styled.div`
+const Wrapper = styled.div`
 display: flex;
+background-color: ${(props) => props.theme.backgroundColor};
 `
 
 const BoxAnimation = keyframes`
@@ -21,14 +22,19 @@ const Box = styled.div`
 height: 200px;
 width:200px;
 background-color: tomato;
-animation: ${BoxAnimation} 1s linear infinite;
+
+h1{
+  color: ${(props) => props.theme.textColor}
+}
 `
 
 function App() {
   return (
-    <Wrapped>
-      <Box/>
-    </Wrapped>
+    <Wrapper>
+      <Box>
+        <h1>Hello</h1>
+      </Box>
+    </Wrapper>
   );
 }
 
