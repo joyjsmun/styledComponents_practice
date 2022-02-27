@@ -11,8 +11,16 @@ const H1 = styled.h1`
 `
 
 function App() {
+  const onClick = (event:React.FormEvent<HTMLButtonElement>) =>{
+    console.log("clicked");
+  }
+ 
+  
   return <Container>
     <H1>Hello Theme!!!</H1>
+    <form>
+    <button onClick={onClick}>Click me!!</button>
+    </form>
   </Container>
 }
 
